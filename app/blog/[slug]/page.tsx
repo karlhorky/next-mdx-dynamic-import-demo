@@ -1,8 +1,5 @@
-import { Inter } from 'next/font/google';
 import { notFound } from 'next/navigation';
 import type { JSX } from 'react';
-
-const inter = Inter({ subsets: ['latin'] });
 
 type Props = {
   params: {
@@ -10,8 +7,9 @@ type Props = {
   };
 };
 
-export default async function Home(props: Props) {
+export default async function BlogPost(props: Props) {
   let MDXContent: () => JSX.Element;
+
   try {
     MDXContent = (await import(`../../../content/${props.params.slug}.mdx`))
       .default;

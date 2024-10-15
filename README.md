@@ -7,6 +7,6 @@
 - [better than `next-mdx-remote` or `mdx-bundler`](https://github.com/vercel/next.js/discussions/70417)
 - TypeScript checks in MDX files with [MDX Analyzer](https://marketplace.visualstudio.com/items?itemName=unifiedjs.vscode-mdx)
 
-CodeSandbox: https://githubbox.com/karlhorky/next-mdx-dynamic-import-demo
+CodeSandbox: https://codesandbox.io/p/devbox/github/karlhorky/next-mdx-dynamic-import-demo
 
 TODO: CodeSandbox video
