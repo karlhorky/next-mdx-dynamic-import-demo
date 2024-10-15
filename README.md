@@ -1,7 +1,8 @@
 # `@next/mdx` with Dynamic Import
 
 - dynamic import: `` await import(`../../content/${slug}.mdx`) ``
-  - import content from outside of the `app/` directory
+  - import MDX content from outside of the `app/` directory
+  - import metadata
   - use [Next.js dynamic routes](https://nextjs.org/docs/app/building-your-application/routing/dynamic-routes)
 - use in [async components](https://react.dev/reference/rsc/server-components#async-components-with-server-components) (React Server Components in Next.js App Router)
 - [better than `next-mdx-remote` or `mdx-bundler`](https://github.com/vercel/next.js/discussions/70417)
