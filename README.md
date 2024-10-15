@@ -9,4 +9,4 @@
 
 CodeSandbox: https://codesandbox.io/p/devbox/github/karlhorky/next-mdx-dynamic-import-demo
 
-TODO: CodeSandbox video
+https://github.com/user-attachments/assets/3981b2d7-7a42-48ca-be77-47d816d9e12e
