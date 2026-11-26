@@ -12,12 +12,13 @@ type MdxModule = {
 };
 
 export async function generateMetadata({ params }: Props) {
+  const { slug } = await params;
   let metadata = {
     title: 'Not Found',
   };
 
   try {
-    ({ metadata } = await import(`../../../content/${params.slug}.mdx`));
+    ({ metadata } = await import(`../../../content/${slug}.mdx`));
   } catch {
     // Swallow errors
   }
@@ -26,17 +27,17 @@ export async function generateMetadata({ params }: Props) {
 }
 
 type Props = {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 };
 
 export default async function BlogPost(props: Props) {
+  const { slug } = await props.params;
   let MDXContent: MdxModule['default'];
 
   try {
-    MDXContent = (await import(`../../../content/${props.params.slug}.mdx`))
-      .default;
+    MDXContent = (await import(`../../../content/${slug}.mdx`)).default;
   } catch {
     notFound();
   }
